@@ -37,9 +37,9 @@ mongoose.connect(URI, {
 })
 
 
-// app.get('/', (req, res) => {
-//     res.json({ message: "welcome to my world" })
-// })
+app.get('/', (req, res) => {
+    res.json({ message: "welcome to Lighthill" })
+})
 
 
 if (process.env.NODE_ENV === 'production') {
