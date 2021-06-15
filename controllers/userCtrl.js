@@ -16,6 +16,10 @@ const userCtrl = {
 
             if (!validateEmail(email))
                 return res.status(400).json({ msg: "Invalid email" })
+            
+            const user = await Auth.findOne({ email })
+            if (user) return res.status(400).json({ msg: "Thank you for Reaching Out to us once again" })
+    
 
 
             const newUser = new Users({
